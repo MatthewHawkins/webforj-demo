@@ -7,6 +7,20 @@
 
 dwc-app-layout {
   --dwc-app-layout-header-height: 60px;
-  --dwc-app-layout-drawer-width: 20em;
+  --dwc-app-layout-drawer-width: 15em;
 }
 
+dwc-app-layout::part(content) {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-display{
+  order: 2;
+  background-color: red;
+}
+
+.home-view{
+  overflow: auto;
+}

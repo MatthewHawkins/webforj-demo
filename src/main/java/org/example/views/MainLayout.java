@@ -3,11 +3,11 @@ package org.example.views;
 import java.util.Set;
 
 import org.example.components.DrawerHeader;
+import org.example.sections.InfoDisplay;
 
 import com.webforj.component.Component;
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.H1;
-import com.webforj.component.icons.FeatherIcon;
 import com.webforj.component.icons.TablerIcon;
 import com.webforj.component.layout.applayout.AppDrawerToggle;
 import com.webforj.component.layout.applayout.AppLayout;
@@ -23,10 +23,12 @@ import com.webforj.router.event.NavigateEvent;
 public class MainLayout extends Composite<AppLayout> {
   private AppLayout self = getBoundComponent();
   private H1 title = new H1();
+  private InfoDisplay infoDisplay = new InfoDisplay();
 
   public MainLayout() {
     setHeader();
     setDrawer();
+    setInfoDisplay();
     Router.getCurrent().onNavigate(this::onNavigate);
   }
 
@@ -45,14 +47,13 @@ public class MainLayout extends Composite<AppLayout> {
   private void setDrawer() {
 
     AppNav appNav = new AppNav();
-    appNav.addItem(new AppNavItem("Inbox", InboxView.class, TablerIcon.create("inbox")));
-    appNav.addItem(new AppNavItem("Outbox", OutboxView.class, TablerIcon.create("send-2")));
-    appNav.addItem(new AppNavItem("Favorites", FavoritesView.class, TablerIcon.create("heart")));
-    appNav.addItem(new AppNavItem("Archived", ArchivedView.class, TablerIcon.create("archive")));
-    appNav.addItem(new AppNavItem("Trash", TrashView.class, TablerIcon.create("trash")));
-    appNav.addItem(new AppNavItem("Spam", SpamView.class, TablerIcon.create("alert-hexagon")));
+    appNav.addItem(new AppNavItem("Home", HomeView.class, TablerIcon.create("home")));
 
     self.addToDrawer(appNav);
+  }
+
+  private void setInfoDisplay(){
+    self.add(infoDisplay);
   }
 
   private void onNavigate(NavigateEvent ev) {
