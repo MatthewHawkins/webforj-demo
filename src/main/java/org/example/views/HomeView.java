@@ -1,7 +1,6 @@
 package org.example.views;
 
 import com.webforj.component.Composite;
-import com.webforj.component.html.elements.Div;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
 import com.webforj.component.layout.flexlayout.FlexDirection;
 import com.webforj.component.layout.flexlayout.FlexLayout;
@@ -19,6 +18,5 @@ public class HomeView extends Composite<FlexLayout>{
     self.setWidth("100%");
     self.setAlignment(FlexAlignment.CENTER);
     self.setDirection(FlexDirection.COLUMN);
-    // self.add(new Div().setHeight("100vh").setWidth("100%").setStyle("background-color", "green"), new Div().setHeight("100vh").setWidth("100%").setStyle("background-color", "purple"));
   }
 }
