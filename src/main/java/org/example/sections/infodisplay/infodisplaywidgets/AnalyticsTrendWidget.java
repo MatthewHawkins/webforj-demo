@@ -36,6 +36,7 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
         options.put("backgroundColor", "transparent");
         options.put("chartArea", Map.of("width", "80%", "height", "70%")); 
         options.put("legend", "none"); 
+        options.put("tooltip", Map.of("trigger", "none"));
         options.put("hAxis", Map.of("textStyle", Map.of("color", "white"))); 
         options.put("vAxis", Map.of("textStyle", Map.of("color", "white"), "minValue", 0));
         options.put("hAxis", Map.of(

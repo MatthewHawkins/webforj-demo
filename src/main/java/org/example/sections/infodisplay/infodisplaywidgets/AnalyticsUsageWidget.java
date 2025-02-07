@@ -34,6 +34,7 @@ public class AnalyticsUsageWidget extends Composite<FlexLayout> {
         Map<String, Object> options = new HashMap<>();
         options.put("colors", List.of("white"));
         options.put("backgroundColor", "transparent");
+        options.put("tooltip", Map.of("trigger", "none"));
         options.put("chartArea", Map.of("width", "80%", "height", "70%")); 
         options.put("legend", "none"); 
         options.put("hAxis", Map.of("textStyle", Map.of("color", "white"))); 

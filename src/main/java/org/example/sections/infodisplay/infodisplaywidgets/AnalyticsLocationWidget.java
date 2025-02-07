@@ -38,6 +38,7 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
         options.put("datalessRegionColor", "transparent"); 
         options.put("defaultColor", "white"); 
         options.put("legend", "none"); 
+        options.put("tooltip", Map.of("trigger", "none"));
         options.put("displayMode", "regions"); 
 
         chart.setOptions(options);
