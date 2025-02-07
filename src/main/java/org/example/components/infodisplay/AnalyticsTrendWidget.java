@@ -1,4 +1,4 @@
-package org.example.sections.infodisplay.infodisplaywidgets;
+package org.example.components.infodisplay;
 
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.Paragraph;
@@ -12,12 +12,12 @@ import com.webforj.component.googlecharts.GoogleChart;
 
 import java.util.*;
 
-public class AnalyticsUsageWidget extends Composite<FlexLayout> {
+public class AnalyticsTrendWidget extends Composite<FlexLayout> {
 
     private final FlexLayout self = getBoundComponent();
-    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.COLUMN);
+    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.LINE);
 
-    public AnalyticsUsageWidget() {
+    public AnalyticsTrendWidget() {
         self.setDirection(FlexDirection.ROW)
             .setJustifyContent(FlexJustifyContent.BETWEEN)
             .setAlignment(FlexAlignment.CENTER)
@@ -26,7 +26,7 @@ public class AnalyticsUsageWidget extends Composite<FlexLayout> {
             .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
-        Paragraph titleText = new Paragraph("Web Usage");
+        Paragraph titleText = new Paragraph("Monthly Trend");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
@@ -34,9 +34,9 @@ public class AnalyticsUsageWidget extends Composite<FlexLayout> {
         Map<String, Object> options = new HashMap<>();
         options.put("colors", List.of("white"));
         options.put("backgroundColor", "transparent");
-        options.put("tooltip", Map.of("trigger", "none"));
         options.put("chartArea", Map.of("width", "80%", "height", "70%")); 
         options.put("legend", "none"); 
+        options.put("tooltip", Map.of("trigger", "none"));
         options.put("hAxis", Map.of("textStyle", Map.of("color", "white"))); 
         options.put("vAxis", Map.of("textStyle", Map.of("color", "white"), "minValue", 0));
         options.put("hAxis", Map.of(

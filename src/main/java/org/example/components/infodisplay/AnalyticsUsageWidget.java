@@ -1,4 +1,4 @@
-package org.example.sections.infodisplay.infodisplaywidgets;
+package org.example.components.infodisplay;
 
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.Paragraph;
@@ -12,45 +12,54 @@ import com.webforj.component.googlecharts.GoogleChart;
 
 import java.util.*;
 
-public class AnalyticsLocationWidget extends Composite<FlexLayout> {
+public class AnalyticsUsageWidget extends Composite<FlexLayout> {
 
     private final FlexLayout self = getBoundComponent();
-    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.GEO);
+    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.COLUMN);
 
-    public AnalyticsLocationWidget() {
+    public AnalyticsUsageWidget() {
         self.setDirection(FlexDirection.ROW)
             .setJustifyContent(FlexJustifyContent.BETWEEN)
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
             .setStyle("background-color", "var(--dwc-surface-3)") 
-            .setStyle("color", "white")
             .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
-        Paragraph titleText = new Paragraph("Top Locations");
+        Paragraph titleText = new Paragraph("Web Usage");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
 
         Map<String, Object> options = new HashMap<>();
-        options.put("colors", List.of("#ffa052", "#0284c7"));
+        options.put("colors", List.of("white"));
         options.put("backgroundColor", "transparent");
-        options.put("datalessRegionColor", "transparent"); 
-        options.put("defaultColor", "white"); 
-        options.put("legend", "none"); 
         options.put("tooltip", Map.of("trigger", "none"));
-        options.put("displayMode", "regions"); 
+        options.put("chartArea", Map.of("width", "80%", "height", "70%")); 
+        options.put("legend", "none"); 
+        options.put("hAxis", Map.of("textStyle", Map.of("color", "white"))); 
+        options.put("vAxis", Map.of("textStyle", Map.of("color", "white"), "minValue", 0));
+        options.put("hAxis", Map.of(
+            "textStyle", Map.of("color", "transparent"), 
+            "baselineColor", "transparent",
+            "gridlines", Map.of("color", "transparent")
+        ));
+        options.put("vAxis", Map.of(
+        "textStyle", Map.of("color", "transparent"),
+        "baselineColor", "transparent",
+        "gridlines", Map.of("color", "transparent") 
+        ));
 
         chart.setOptions(options);
-        chart.setStyle("width", "70px") 
-             .setStyle("height", "35px");
+        chart.setStyle("width", "125px")
+             .setStyle("height", "40px");
 
         List<Object> data = new ArrayList<>();
-        data.add(List.of("Country", "Views")); 
-
-        String[] countries = {"Germany", "United States", "Brazil", "Canada", "France", "RU"};
-        for (String country : countries) {
-            data.add(List.of(country, Math.random() * 10000)); 
+        data.add(List.of("Month", "Views")); 
+     
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        for (String month : months) {
+                 data.add(List.of(month, Math.random() * 10000)); 
         }
         chart.setData(data);
 

@@ -1,9 +1,9 @@
 package org.example.sections.infodisplay;
 
-import org.example.sections.infodisplay.infodisplaywidgets.AnalyticsLocationWidget;
-import org.example.sections.infodisplay.infodisplaywidgets.AnalyticsTrendWidget;
-import org.example.sections.infodisplay.infodisplaywidgets.AnalyticsViewsWidget;
-import org.example.sections.infodisplay.infodisplaywidgets.AnalyticsUsageWidget;
+import org.example.components.infodisplay.AnalyticsLocationWidget;
+import org.example.components.infodisplay.AnalyticsTrendWidget;
+import org.example.components.infodisplay.AnalyticsUsageWidget;
+import org.example.components.infodisplay.AnalyticsViewsWidget;
 
 import com.webforj.component.Composite;
 import com.webforj.component.layout.flexlayout.FlexAlignment;

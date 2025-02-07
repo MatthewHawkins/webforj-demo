@@ -1,7 +1,8 @@
-package org.example.sections.infodisplay.infodisplaywidgets;
+package org.example.components.infodisplay;
 
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.html.elements.Strong;
 import com.webforj.component.icons.Icon;
 import com.webforj.component.icons.TablerIcon;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
@@ -29,7 +30,7 @@ public class AnalyticsViewsWidget extends Composite<FlexLayout> {
                      .setMargin("5px")
                      .setSpacing("none");
 
-        Paragraph titleText = new Paragraph("Total Views");
+        Strong titleText = new Strong("Total Views");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
