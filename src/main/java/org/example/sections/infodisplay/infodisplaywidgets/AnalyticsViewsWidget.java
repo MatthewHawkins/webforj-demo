@@ -20,13 +20,13 @@ public class AnalyticsViewsWidget extends Composite<FlexLayout> {
             .setWidth("100%")
             .setStyle("background-color", "var(--dwc-surface-3)") 
             .setStyle("cursor", "pointer")
-            .setStyle("height", "70px")
-            .setPadding("5px"); 
+            .setStyle("height", "70px");
 
         FlexLayout textContainer = new FlexLayout();
         textContainer.setDirection(FlexDirection.COLUMN)
                      .setAlignment(FlexAlignment.START)
                      .setJustifyContent(FlexJustifyContent.START)
+                     .setMargin("5px")
                      .setSpacing("none");
 
         Paragraph titleText = new Paragraph("Total Views");

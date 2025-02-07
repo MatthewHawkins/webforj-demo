@@ -22,12 +22,10 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
             .setJustifyContent(FlexJustifyContent.BETWEEN)
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
-            .setPadding("5px")
             .setStyle("background-color", "var(--dwc-surface-3)") 
             .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
-        // Title
         Paragraph titleText = new Paragraph("Monthly Trend");
         titleText.setStyle("font-size", "8px")
                  .setStyle("text-transform", "uppercase");
@@ -63,10 +61,11 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
 
         List<Object> data = new ArrayList<>();
         data.add(List.of("Month", "Views")); 
-
-        data.add(List.of("Jan", 5000));
-        data.add(List.of("Feb", 7500));
-
+     
+        String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        for (String month : months) {
+                 data.add(List.of(month, Math.random() * 10000)); 
+        }
         chart.setData(data);
 
         Icon icon = TablerIcon.create("caret-right");
@@ -75,6 +74,7 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
 
         FlexLayout textAndChart = new FlexLayout();
         textAndChart.setDirection(FlexDirection.COLUMN)
+                    .setMargin("5px")
                     .setSpacing("2px");
         textAndChart.add(titleText, chart);
 

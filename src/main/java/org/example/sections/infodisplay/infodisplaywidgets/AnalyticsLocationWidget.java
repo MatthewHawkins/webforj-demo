@@ -22,7 +22,6 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
             .setJustifyContent(FlexJustifyContent.BETWEEN)
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
-            .setPadding("5px")
             .setStyle("background-color", "var(--dwc-surface-3)") 
             .setStyle("color", "white")
             .setStyle("cursor", "pointer")
@@ -42,7 +41,7 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
 
         chart.setOptions(options);
         chart.setStyle("width", "70px") 
-             .setStyle("height", "40px");
+             .setStyle("height", "35px");
 
         List<Object> data = new ArrayList<>();
         data.add(List.of("Country", "Views")); 
@@ -59,6 +58,7 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
 
         FlexLayout textAndChart = new FlexLayout();
         textAndChart.setDirection(FlexDirection.COLUMN)
+                    .setMargin("5px")
                     .setSpacing("2px");
         textAndChart.add(titleText, chart);
 
