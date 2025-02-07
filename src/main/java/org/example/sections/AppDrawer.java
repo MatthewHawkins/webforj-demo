@@ -24,7 +24,11 @@ public class AppDrawer extends Composite<FlexLayout>{
 
   private void setHeader(){
     AppNav appNav = new AppNav();
-    appNav.addItem(new AppNavItem("Home", HomeView.class, TablerIcon.create("home")).setSuffixComponent(new Badge("6", Variant.SUCCESS, true, true)));
+    appNav.addItem(new AppNavItem("Home", HomeView.class, TablerIcon.create("home")));
+    appNav.addItem(new AppNavItem("Alerts", "/home/alerts", TablerIcon.create("alert-hexagon")).setSuffixComponent(new Badge("4", Variant.DANGER, true, true)));
+    appNav.addItem(new AppNavItem("Metrics", "/home/metrics", TablerIcon.create("graph")));
+    appNav.addItem(new AppNavItem("Reports", "/home/reports", TablerIcon.create("report")));
+    appNav.addItem(new AppNavItem("Leads", "/home/leads", TablerIcon.create("device-ipad-star")).setSuffixComponent(new Badge("63", Variant.PRIMARY, true, true)));
     self.add(appNav);
     self.add(new DrawerProgress());
   }

@@ -11,40 +11,68 @@ dwc-app-layout::part(content) {
   flex-direction: row;
 }
 
-.app-drawer__header{
-  background-color: var(--dwc-surface-2);
-  min-width: 100%;
-  padding: 14px 0
+dwc-app-nav {
+  margin: 0;
 }
 
-.app-drawer__progress{
+dwc-app-nav-item::part(link) {
+  margin-left: var(--dwc-space-s);
+  gap: var(--dwc-space-m);
+}
+
+dwc-app-nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--dwc-space-xs);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+dwc-app-nav-item[selected]::before {
+  background-color: var(--dwc-color-primary);
+}
+
+sl-badge::part(base) {
+  border: none;
+}
+
+.app-drawer__header {
+  background-color: var(--dwc-surface-2);
+  min-width: 100%;
+  padding: 14px 0;
+}
+
+.app-drawer__progress {
   margin: 3em 0;
 }
 
-.app-drawer__progress > div > sl-progress-ring{
+.app-drawer__progress > div > sl-progress-ring {
   --size: 80px;
   --track-color: var(--dwc-surface-1);
 }
 
-.app-drawer__progress > div > sl-progress-ring::part(label){
+.app-drawer__progress > div > sl-progress-ring::part(label) {
   font-size: 1.75em;
   font-weight: 300;
 }
 
 .app-drawer__progress > div > p {
-font-size: 1.1em;
-font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 400;
 }
 
-.app-drawer__progress > div:first-child > sl-progress-ring{
-  --indicator-color:#FFA052
+.app-drawer__progress > div:first-child > sl-progress-ring {
+  --indicator-color: #ffa052;
 }
 
-.info-display{
+.info-display {
   order: 2;
   background-color: red;
 }
 
-.home-view{
+.home-view {
   overflow: auto;
 }

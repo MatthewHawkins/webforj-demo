@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.example.sections.AppDrawer;
 import org.example.sections.InfoDisplay;
+import org.example.sections.appdrawer.DrawerFooter;
 import org.example.sections.appdrawer.DrawerHeader;
 
 import com.webforj.component.Component;
@@ -41,8 +42,10 @@ public class MainLayout extends Composite<AppLayout> {
 
   private void setDrawer() {
     self.setDrawerHeaderVisible(true);
+    self.setDrawerFooterVisible(true);
     self.addToDrawerTitle(new DrawerHeader());
     self.addToDrawer(new AppDrawer());
+    self.addToDrawerFooter(new DrawerFooter());
   }
 
   private void setInfoDisplay(){
