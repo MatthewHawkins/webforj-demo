@@ -75,3 +75,30 @@ sl-badge::part(base) {
 .home-view {
   overflow: auto;
 }
+
+.home-view__table{
+  height: 100%;
+  width: 100%;
+}
+
+.home-view__table::part(header){
+  /* display: none; */
+}
+
+.home-view__table::part(badge){
+  padding: 5px;
+  border-radius: 100%;
+  margin: 1em;
+}
+
+.home-view__table::part(badge-high){
+  background-color: #4CAF50	;
+}
+
+.home-view__table::part(badge-low){
+  background-color: #ffa052	;
+}
+
+.home-view__table::part(badge-medium){
+  background-color: #0284C7	;
+}

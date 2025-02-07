@@ -13,7 +13,7 @@ public final class Service {
 
   public static Repository<SalesEntry> getSalesEntries() {
     List<SalesEntry> data =
-        new Gson().fromJson(Assets.contentOf("ws://data.json"),
+        new Gson().fromJson(Assets.contentOf(Assets.resolveContextUrl("context://static/data.json")),
             new TypeToken<List<SalesEntry>>() {});
 
     return new CollectionRepository<>(data);

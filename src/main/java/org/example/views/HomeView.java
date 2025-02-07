@@ -22,6 +22,6 @@ public class HomeView extends Composite<FlexLayout>{
     self.setAlignment(FlexAlignment.CENTER);
     self.setDirection(FlexDirection.COLUMN);
     self.add(new H1("Placeholder"));
-    // self.add(new SalesTable());
+    self.add(new SalesTable());
   }
 }
