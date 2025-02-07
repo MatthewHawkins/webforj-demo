@@ -1,0 +1,110 @@
+[
+  {
+    "ranking": "HIGH",
+    "company": "Apple",
+    "product": "iPad Pro",
+    "serialNumber": "A123456789",
+    "dayOfWeek": "Monday",
+    "dateTime": "2024-02-05T10:30:00",
+    "totalRevenue": 999.99
+  },
+  {
+    "ranking": "MEDIAN",
+    "company": "Samsung",
+    "product": "Galaxy Tab S8",
+    "serialNumber": "S987654321",
+    "dayOfWeek": "Tuesday",
+    "dateTime": "2024-02-06T14:45:00",
+    "totalRevenue": 749.99
+  },
+  {
+    "ranking": "LOW",
+    "company": "Microsoft",
+    "product": "Surface Pro 8",
+    "serialNumber": "M567812349",
+    "dayOfWeek": "Wednesday",
+    "dateTime": "2024-02-07T09:20:00",
+    "totalRevenue": 1199.99
+  },
+  {
+    "ranking": "HIGH",
+    "company": "Amazon",
+    "product": "Fire HD 10",
+    "serialNumber": "AM345671239",
+    "dayOfWeek": "Thursday",
+    "dateTime": "2024-02-08T18:10:00",
+    "totalRevenue": 149.99
+  },
+  {
+    "ranking": "LOW",
+    "company": "Lenovo",
+    "product": "Tab P11",
+    "serialNumber": "L111223344",
+    "dayOfWeek": "Friday",
+    "dateTime": "2024-02-09T11:05:00",
+    "totalRevenue": 299.99
+  },
+  {
+    "ranking": "MEDIAN",
+    "company": "Apple",
+    "product": "iPad Air",
+    "serialNumber": "A765432198",
+    "dayOfWeek": "Saturday",
+    "dateTime": "2024-02-10T15:30:00",
+    "totalRevenue": 799.99
+  },
+  {
+    "ranking": "HIGH",
+    "company": "Samsung",
+    "product": "Galaxy Tab A7",
+    "serialNumber": "S543219876",
+    "dayOfWeek": "Sunday",
+    "dateTime": "2024-02-11T12:00:00",
+    "totalRevenue": 229.99
+  },
+  {
+    "ranking": "MEDIAN",
+    "company": "Microsoft",
+    "product": "Surface Go 3",
+    "serialNumber": "M987123654",
+    "dayOfWeek": "Monday",
+    "dateTime": "2024-02-12T08:40:00",
+    "totalRevenue": 549.99
+  },
+  {
+    "ranking": "HIGH",
+    "company": "Amazon",
+    "product": "Fire HD 8",
+    "serialNumber": "AM123987654",
+    "dayOfWeek": "Tuesday",
+    "dateTime": "2024-02-13T17:25:00",
+    "totalRevenue": 89.99
+  },
+  {
+    "ranking": "LOW",
+    "company": "Lenovo",
+    "product": "Yoga Tab 13",
+    "serialNumber": "L999888777",
+    "dayOfWeek": "Wednesday",
+    "dateTime": "2024-02-14T10:55:00",
+    "totalRevenue": 599.99
+  },
+  {
+    "ranking": "HIGH",
+    "company": "Apple",
+    "product": "iPad Mini",
+    "serialNumber": "A456789123",
+    "dayOfWeek": "Thursday",
+    "dateTime": "2024-02-15T19:15:00",
+    "totalRevenue": 529.99
+  },
+  {
+    "ranking": "MEDIAN",
+    "company": "Samsung",
+    "product": "Galaxy Tab S7",
+    "serialNumber": "S321654987",
+    "dayOfWeek": "Friday",
+    "dateTime": "2024-02-16T14:10:00",
+    "totalRevenue": 699.99
+  }
+]

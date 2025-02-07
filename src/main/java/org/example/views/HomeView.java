@@ -1,5 +1,7 @@
 package org.example.views;
 
+import org.example.sections.home.SalesTable;
+
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.H1;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
@@ -20,5 +22,6 @@ public class HomeView extends Composite<FlexLayout>{
     self.setAlignment(FlexAlignment.CENTER);
     self.setDirection(FlexDirection.COLUMN);
     self.add(new H1("Placeholder"));
+    // self.add(new SalesTable());
   }
 }
