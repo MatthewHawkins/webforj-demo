@@ -31,6 +31,7 @@ public class AnalyticsViewsWidget extends Composite<FlexLayout> {
 
         Paragraph titleText = new Paragraph("Total Views");
         titleText.setStyle("font-size", "8px")
+                 .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
 
         Paragraph valueText = new Paragraph("424,762");

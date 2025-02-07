@@ -29,10 +29,11 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
 
         Paragraph titleText = new Paragraph("Top Locations");
         titleText.setStyle("font-size", "8px")
+                 .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
 
         Map<String, Object> options = new HashMap<>();
-        options.put("colors", List.of("white"));
+        options.put("colors", List.of("#ffa052", "#0284c7"));
         options.put("backgroundColor", "transparent");
         options.put("datalessRegionColor", "transparent"); 
         options.put("defaultColor", "white"); 

@@ -12,12 +12,12 @@ import com.webforj.component.googlecharts.GoogleChart;
 
 import java.util.*;
 
-public class AnalyticsTrendWidget extends Composite<FlexLayout> {
+public class AnalyticsUsageWidget extends Composite<FlexLayout> {
 
     private final FlexLayout self = getBoundComponent();
-    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.LINE);
+    private final GoogleChart chart = new GoogleChart(GoogleChart.Type.COLUMN);
 
-    public AnalyticsTrendWidget() {
+    public AnalyticsUsageWidget() {
         self.setDirection(FlexDirection.ROW)
             .setJustifyContent(FlexJustifyContent.BETWEEN)
             .setAlignment(FlexAlignment.CENTER)
@@ -26,7 +26,7 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
             .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
-        Paragraph titleText = new Paragraph("Monthly Trend");
+        Paragraph titleText = new Paragraph("Web Usage");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
                  .setStyle("text-transform", "uppercase");
