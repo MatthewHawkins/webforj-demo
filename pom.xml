@@ -65,6 +65,12 @@
       <artifactId>webforj</artifactId>
       <version>${webforj.version}</version>
     </dependency>
+    
+   <dependency>
+      <groupId>com.webforj</groupId>
+      <artifactId>webforj-googlecharts</artifactId>
+      <version>${webforj.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>

@@ -70,7 +70,6 @@ sl-badge::part(base) {
 
 .info-display {
   order: 2;
-  background-color: red;
 }
 
 .home-view {
