@@ -23,12 +23,12 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
             .setStyle("background-color", "var(--dwc-surface-3)") 
-            .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
         Paragraph titleText = new Paragraph("Monthly Trend");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
+                 .setStyle("color", "#9ba8af") 
                  .setStyle("text-transform", "uppercase");
 
         Map<String, Object> options = new HashMap<>();
@@ -69,7 +69,7 @@ public class AnalyticsTrendWidget extends Composite<FlexLayout> {
 
         FlexLayout textAndChart = new FlexLayout();
         textAndChart.setDirection(FlexDirection.COLUMN)
-                    .setMargin("5px")
+                    .setMargin("10px")
                     .setSpacing("2px");
         textAndChart.add(titleText, chart);
 

@@ -23,13 +23,12 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
             .setStyle("background-color", "var(--dwc-surface-3)") 
-            .setStyle("color", "white")
-            .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
         Paragraph titleText = new Paragraph("Top Locations");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
+                 .setStyle("color", "#9ba8af") 
                  .setStyle("text-transform", "uppercase");
 
         Map<String, Object> options = new HashMap<>();
@@ -60,7 +59,7 @@ public class AnalyticsLocationWidget extends Composite<FlexLayout> {
 
         FlexLayout textAndChart = new FlexLayout();
         textAndChart.setDirection(FlexDirection.COLUMN)
-                    .setMargin("5px")
+                    .setMargin("10px")
                     .setSpacing("2px");
         textAndChart.add(titleText, chart);
 

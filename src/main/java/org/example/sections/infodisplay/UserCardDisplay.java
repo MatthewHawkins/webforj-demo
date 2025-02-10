@@ -13,7 +13,7 @@ public class UserCardDisplay extends Composite<FlexLayout> {
 
     public UserCardDisplay() {
         self.setDirection(FlexDirection.COLUMN)
-            .setSpacing("10px")
+            .setSpacing("none")
             .setStyle("width", "100%");
 
         Paragraph title = new Paragraph("Frequent Users");
@@ -21,12 +21,14 @@ public class UserCardDisplay extends Composite<FlexLayout> {
              .setStyle("font-weight", "bold")
              .setStyle("text-transform", "uppercase")
              .setStyle("color", "#9ba8af") 
-             .setStyle("padding", "10px 15px");
+             .setStyle("background-color", "var(--dwc-surface-3)") 
+             .setStyle("margin-top", "2px")
+             .setStyle("margin-bottom", "0px")
+             .setStyle("padding", "10px");
 
         Div userCardWrapper = new Div();
         userCardWrapper.setStyle("display", "flex")
-                       .setStyle("flex-direction", "column")
-                       .setStyle("gap", "10px");
+                       .setStyle("flex-direction", "column");
 
         String[] names = {"Telma Fridley", "Chandler Hervieux", "Percy Demers", "Antoine Masson"};
         String[] positions = {"Admin User", "Manager", "Director", "Premium User"};

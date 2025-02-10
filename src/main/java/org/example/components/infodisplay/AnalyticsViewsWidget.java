@@ -2,7 +2,6 @@ package org.example.components.infodisplay;
 
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.Paragraph;
-import com.webforj.component.html.elements.Strong;
 import com.webforj.component.icons.Icon;
 import com.webforj.component.icons.TablerIcon;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
@@ -20,19 +19,19 @@ public class AnalyticsViewsWidget extends Composite<FlexLayout> {
             .setAlignment(FlexAlignment.CENTER)
             .setWidth("100%")
             .setStyle("background-color", "var(--dwc-surface-3)") 
-            .setStyle("cursor", "pointer")
             .setStyle("height", "70px");
 
         FlexLayout textContainer = new FlexLayout();
         textContainer.setDirection(FlexDirection.COLUMN)
                      .setAlignment(FlexAlignment.START)
                      .setJustifyContent(FlexJustifyContent.START)
-                     .setMargin("5px")
+                     .setMargin("10px")
                      .setSpacing("none");
 
-        Strong titleText = new Strong("Total Views");
+        Paragraph titleText = new Paragraph("Total Views");
         titleText.setStyle("font-size", "8px")
                  .setStyle("font-weight", "bold")
+                 .setStyle("color", "#9ba8af") 
                  .setStyle("text-transform", "uppercase");
 
         Paragraph valueText = new Paragraph("424,762");

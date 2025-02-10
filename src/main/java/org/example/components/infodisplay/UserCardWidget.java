@@ -18,14 +18,14 @@ public class UserCardWidget extends Composite<FlexLayout> {
     public UserCardWidget(String name, String role, String avatarUrl) {
         self.setDirection(FlexDirection.ROW)
             .setAlignment(FlexAlignment.CENTER)
-            .setSpacing("none")
-            .setStyle("border-radius", "8px")
+            .setSpacing("10px")
             .setStyle("color", "white")
             .setStyle("background-color", "var(--dwc-surface-3)") 
             .setWidth("100%");
 
         avatar = new Img(avatarUrl, "User Avatar");
         avatar.setStyle("width", "30px")
+              .setStyle("margin-left", "10px")
               .setStyle("height", "30px")
               .setStyle("border-radius", "50%");
 
@@ -38,6 +38,7 @@ public class UserCardWidget extends Composite<FlexLayout> {
 
         FlexLayout textContainer = new FlexLayout();
         textContainer.setDirection(FlexDirection.COLUMN)
+                     .setMargin("10px")
                      .setSpacing("2px");
         textContainer.add(username, position);
 
