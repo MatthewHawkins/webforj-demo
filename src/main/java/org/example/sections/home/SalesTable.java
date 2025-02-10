@@ -31,7 +31,7 @@ public class SalesTable extends Composite<FlexLayout>{
     table.addColumn("Company", SalesEntry::getCompany);
     table.addColumn("Revenue", SalesEntry::getTotalRevenue).setSortable(true);
     App.console().log(table.getColumns().getLast().getId());
-    table.getColumns().getLast().setSortDirection(SortDirection.ASC);
+    // table.setClientSorting(true);
 
     sortOptions.addTab("ALL");
     sortOptions.addTab("HIGHEST");
@@ -45,18 +45,18 @@ public class SalesTable extends Composite<FlexLayout>{
   }
 
   private void tableFilter(TabSelectEvent e){
+    table.deselectAll();
     if(e.getTabIndex() == 0){
-      // nothing
+      table.getColumnById("Revenue").setSortDirection(SortDirection.NONE);
+      table.getRepository().commit();
     } else if(e.getTabIndex() == 1){
-      // table.getColumnById("Revenue").setSortDirection(SortDirection.DESC);
-      table.getColumns().getLast().setSortDirection(SortDirection.DESC);
+      table.getColumnById("Revenue").setSortDirection(SortDirection.DESC);
+      table.getRepository().commit();
       App.console().log("HIGH");
     } else if(e.getTabIndex() == 2){
-      // table.getColumnById("Revenue").setSortDirection(SortDirection.ASC);
-      table.getColumns().getLast().setSortDirection(SortDirection.ASC);
+      table.getColumnById("Revenue").setSortDirection(SortDirection.ASC);
+      table.getRepository().commit();
       App.console().log("LOW");
-
     }
   }
-
 }
