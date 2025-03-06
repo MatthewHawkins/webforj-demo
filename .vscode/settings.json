@@ -23,4 +23,5 @@
     "com.basis.*",
     "javax.swing.*",
   ],
+  "java.compile.nullAnalysis.mode": "disabled",
 }

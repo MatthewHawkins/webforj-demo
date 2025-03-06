@@ -13,25 +13,30 @@ import com.webforj.component.tabbedpane.event.TabSelectEvent;
 import com.webforj.component.table.Table;
 import com.webforj.component.table.Column.SortDirection;
 
-public class SalesTable extends Composite<FlexLayout>{
-  
+public class SalesTable extends Composite<FlexLayout> {
+
   FlexLayout self = getBoundComponent();
 
   TabbedPane sortOptions = new TabbedPane();
   Table<SalesEntry> table = new Table<>();
 
-  public SalesTable(){
+  public SalesTable() {
     getBoundComponent().setHeight("100%");
     getBoundComponent().setWidth("100%");
     getBoundComponent().setDirection(FlexDirection.COLUMN);
+    getBoundComponent().setStyle("background-color", "var(--dwc-surface-3)");
 
     table.setRepository(Service.getSalesEntries());
     table.addClassName("home-view__table");
     table.addColumn("Growth", SalesEntry::getRanking).setRenderer(new HighLowRenderer());
+    table.addColumn("Name", SalesEntry::getCompany).setHidden(true);
+    table.addColumn("Product", SalesEntry::getProduct).setHidden(true);
+    // table.addColumn("Company and Product", );
     table.addColumn("Company", SalesEntry::getCompany);
     table.addColumn("Revenue", SalesEntry::getTotalRevenue).setSortable(true);
     App.console().log(table.getColumns().getLast().getId());
-    // table.setClientSorting(true);
+    table.setClientSorting(true);
+
 
     sortOptions.addTab("ALL");
     sortOptions.addTab("HIGHEST");
@@ -44,19 +49,17 @@ public class SalesTable extends Composite<FlexLayout>{
     getBoundComponent().add(sortOptions, table);
   }
 
-  private void tableFilter(TabSelectEvent e){
-    table.deselectAll();
-    if(e.getTabIndex() == 0){
-      table.getColumnById("Revenue").setSortDirection(SortDirection.NONE);
+  private void tableFilter(TabSelectEvent e) {
+    SortDirection sortDirection = switch (e.getTabIndex()) {
+      case 0 -> SortDirection.NONE;
+      case 1 -> SortDirection.DESC;
+      case 2 -> SortDirection.ASC;
+      default -> null;
+    };
+
+    if (sortDirection != null) {
+      table.getColumnById("Revenue").setSortDirection(sortDirection);
       table.getRepository().commit();
-    } else if(e.getTabIndex() == 1){
-      table.getColumnById("Revenue").setSortDirection(SortDirection.DESC);
-      table.getRepository().commit();
-      App.console().log("HIGH");
-    } else if(e.getTabIndex() == 2){
-      table.getColumnById("Revenue").setSortDirection(SortDirection.ASC);
-      table.getRepository().commit();
-      App.console().log("LOW");
     }
   }
 }

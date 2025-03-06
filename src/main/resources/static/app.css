@@ -3,12 +3,20 @@
 dwc-app-layout {
   --dwc-app-layout-header-height: 60px;
   --dwc-app-layout-drawer-width: 15em;
+  background-image: url(cropped_image_40.jpg);
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
 }
 
 dwc-app-layout::part(content) {
   padding: 0px;
   display: flex;
   flex-direction: row;
+}
+
+dwc-app-layout::part(drawer) {
+  opacity: .85;
 }
 
 dwc-app-nav {
@@ -43,6 +51,7 @@ sl-badge::part(base) {
   background-color: var(--dwc-surface-2);
   min-width: 100%;
   padding: 14px 0;
+  opacity: 1;
 }
 
 .app-drawer__progress {
@@ -74,6 +83,12 @@ sl-badge::part(base) {
 
 .home-view {
   overflow: auto;
+}
+
+.home-view__cover{
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .home-view__table{
