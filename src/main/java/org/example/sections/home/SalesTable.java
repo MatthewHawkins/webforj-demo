@@ -2,6 +2,7 @@ package org.example.sections.home;
 
 import org.example.data.SalesEntry;
 import org.example.data.Service;
+import org.example.utils.CompanyRenderer;
 import org.example.utils.HighLowRenderer;
 
 import com.webforj.App;
@@ -32,7 +33,8 @@ public class SalesTable extends Composite<FlexLayout> {
     table.addColumn("Name", SalesEntry::getCompany).setHidden(true);
     table.addColumn("Product", SalesEntry::getProduct).setHidden(true);
     // table.addColumn("Company and Product", );
-    table.addColumn("Company", SalesEntry::getCompany);
+    table.addColumn("Company", SalesEntry::getCompany).setHidden(true);
+    table.addColumn("Company", SalesEntry::getCompany).setRenderer(new CompanyRenderer());
     table.addColumn("Revenue", SalesEntry::getTotalRevenue).setSortable(true);
     App.console().log(table.getColumns().getLast().getId());
     table.setClientSorting(true);

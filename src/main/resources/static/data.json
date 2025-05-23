@@ -19,7 +19,7 @@
   },
   {
     "ranking": "LOW",
-    "company": "Microsoft",
+    "company": "Google",
     "product": "Surface Pro 8",
     "serialNumber": "M567812349",
     "dayOfWeek": "Wednesday",
@@ -64,7 +64,7 @@
   },
   {
     "ranking": "MEDIAN",
-    "company": "Microsoft",
+    "company": "Google",
     "product": "Surface Go 3",
     "serialNumber": "M987123654",
     "dayOfWeek": "Monday",

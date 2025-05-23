@@ -5,12 +5,14 @@ import org.example.components.appdrawer.Badge.Variant;
 import org.example.sections.appdrawer.DrawerProgress;
 import org.example.views.HomeView;
 
+import com.webforj.App;
 import com.webforj.component.Composite;
 import com.webforj.component.icons.TablerIcon;
 import com.webforj.component.layout.appnav.AppNav;
 import com.webforj.component.layout.appnav.AppNavItem;
 import com.webforj.component.layout.flexlayout.FlexDirection;
 import com.webforj.component.layout.flexlayout.FlexLayout;
+import com.webforj.component.optioninput.CheckBox;
 
 public class AppDrawer extends Composite<FlexLayout>{
 

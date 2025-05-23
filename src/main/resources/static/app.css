@@ -117,3 +117,9 @@ sl-badge::part(base) {
 .home-view__table::part(badge-medium){
   background-color: #0284C7	;
 }
+
+.home-view__table::part(product-icon) {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+}
