@@ -1,10 +1,9 @@
 package org.example.views;
 
-import org.example.sections.home.SalesTable;
 
+import org.example.components.home.StocksTable;
 import com.webforj.component.Composite;
 import com.webforj.component.html.elements.Div;
-import com.webforj.component.html.elements.H1;
 import com.webforj.component.html.elements.Img;
 import com.webforj.component.layout.flexlayout.FlexAlignment;
 import com.webforj.component.layout.flexlayout.FlexDirection;
@@ -25,12 +24,14 @@ public class HomeView extends Composite<FlexLayout>{
     self.setWidth("100%");
     self.setAlignment(FlexAlignment.CENTER);
     self.setDirection(FlexDirection.COLUMN);
-    // self.add(new H1("Placeholder"));
-    // self.add(new Img("ws://city.jpg").setWidth("100%"));
-    // coverImage.addClassName("home-view__cover");
     spacer.addClassName("home-view__cover");
-    // self.add(coverImage);
     self.add(spacer);
-    self.add(new SalesTable());
+
+// StockDataService service = new StockDataService();
+// String json = Assets.contentOf(Assets.resolveContextUrl("context://static/data/companies.json"));
+// List<StockData> data = service.initializeFromJson(json);
+
+    // self.add(new SalesTable());
+    self.add(new StocksTable());
   }
 }

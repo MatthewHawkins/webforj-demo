@@ -16,7 +16,7 @@ dwc-app-layout::part(content) {
 }
 
 dwc-app-layout::part(drawer) {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 dwc-app-nav {
@@ -85,41 +85,47 @@ sl-badge::part(base) {
   overflow: auto;
 }
 
-.home-view__cover{
+.home-view__cover {
   height: 50%;
   width: 100%;
   object-fit: cover;
 }
 
-.home-view__table{
+.home-view__table {
   height: 100%;
   width: 100%;
 }
 
-.home-view__table::part(header){
-  /* display: none; */
+.home-view__table::part(cell) {
+  height: 60px;
 }
 
-.home-view__table::part(badge){
-  padding: 5px;
-  border-radius: 100%;
-  margin: 1em;
+.home-view__table::part(company) {
+  display: flex;
+  gap: 5px;
+  height: 45px;
+}
+.home-view__table::part(company-img) {
+  height: 40px;
+}
+.home-view__table::part(company-name) {
+  font-size: var(--dwc-font-size-xl);
+}
+.home-view__table::part(company-ticker) {
+  font-size: var(--dwc-font-size-s);
 }
 
-.home-view__table::part(badge-high){
-  background-color: #4CAF50	;
+.home-view__table::part(price) {
+  width: 100%;
+  height: 100%;
 }
-
-.home-view__table::part(badge-low){
-  background-color: #ffa052	;
+.home-view__table::part(price-high) {
+  background-color: var(--dwc-color-success);
+  color: var(--dwc-button-color);
+  height: 100%;
 }
-
-.home-view__table::part(badge-medium){
-  background-color: #0284C7	;
-}
-
-.home-view__table::part(product-icon) {
-  width: 30px;
-  height: 30px;
-  padding: 4px;
+.home-view__table::part(price-low) {
+  background-color: var(--dwc-color-danger);
+  color: var(--dwc-button-color);
+  height: 100%;
 }
